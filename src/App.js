@@ -1,31 +1,39 @@
 
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
 import Projects from './pages/Projects';
 import Dashboard from './pages/Dashboard';
 import Footer from './components/Footer';
+import Auth from './components/Auth';
+import { useContext } from 'react';
+import { tokenAuthorisationContext } from './contexts/TokenAuth';
+
+
 
 
 function App() {
-  return (
-    <div className="App">
 
-      <h2>Project Fair</h2>
+  const {isAuthorised,setIsAuthorised} = useContext(tokenAuthorisationContext)
+
+  return (
+    <>
+
+      
       <Routes>
         <Route path='/' element={<Home/>} />
-        <Route path='/login' element={<Login/>} />
-        <Route path='/register' element={<Register/>} />
-        <Route path='/projects' element={<Projects/>} />
-        <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/login' element={<Auth/>} />
+        <Route path='/register' element={<Auth register />} />
+        <Route path='/projects' element={ isAuthorised? <Projects/>:<Home/> } />
+        <Route path='/dashboard' element={ isAuthorised? <Dashboard/>:<Home/> } />
+        <Route path='/*' element={<Navigate to={'/'}/>} />
+        
       </Routes>
 
       <Footer/>
 
       
-    </div>
+    </>
   );
 }
 

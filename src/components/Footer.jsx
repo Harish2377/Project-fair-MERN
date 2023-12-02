@@ -11,7 +11,7 @@ function Footer() {
     <div className="container-fluid footer-div  d-flex justify-content-evenly w-100 flex-wrap"  >
 
         <div className="website" style={{width:'400px',color:'white'}} >
-            <h4 className='mb-3' style={{fontWeight:'bold'}} > <Link to={'/'} style={{textDecoration:'none',color:'white',fontWeight:'bold'}}><i className="fa-solid fa-truck-fast me-2"></i></Link>{'  '}
+            <h4 className='mb-3' style={{fontWeight:'bold'}} > <Link to={'/'} style={{textDecoration:'none',color:'white',fontWeight:'bold'}}><i className="fa-brands fa-stack-overflow fa-fade me-2 "></i></Link>{'  '}
             Project Fair</h4>
             <h6 style={{textAlign:'justify'}}>Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.</h6>
             <h6>Code licensed MIT, docs CC BY 3.0.</h6>
@@ -21,8 +21,8 @@ function Footer() {
         <div className="links d-flex flex-column" style={{color:'white'}} >
             <h4 className='mb-3' style={{fontWeight:'bold'}} >Links</h4>
             <Link to={'/'} style={{textDecoration:'none',color:'white'}} >Home</Link>
-            <Link to={'/cart'} style={{textDecoration:'none',color:'white'}} >Cart</Link>
-            <Link to={'/wishlist'} style={{textDecoration:'none',color:'white'}} >Wishlist</Link>
+            <Link to={'/login'} style={{textDecoration:'none',color:'white'}} >Login</Link>
+            <Link to={'/register'} style={{textDecoration:'none',color:'white'}} >Register</Link>
         </div>
 
         <div className="guides d-flex flex-column" style={{color:'white'}}>
@@ -36,7 +36,7 @@ function Footer() {
             <h4 className='mb-3' style={{fontWeight:'bold'}} >Contact Us</h4>
             <div className="sub d-flex " >
                 <input type="text" className='form-control rounded' placeholder='Enter your Email Id' />
-                <button className='btn  ms-3 btn-warning rounded w-25'  ><i className="fa-solid fa-arrow-right text-light fa-beat w-100" ></i></button>
+                <button className='btn  ms-3 btn-outline-secondary text-black rounded w-25'  ><i className="fa-solid fa-arrow-right outline-secondary fa-beat w-100" ></i></button>
             </div>
 
             <div className="icons fs-5 d-flex justify-content-between mt-3">
